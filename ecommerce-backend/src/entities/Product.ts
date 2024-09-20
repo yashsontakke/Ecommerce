@@ -3,6 +3,7 @@ export class Product {
         public id: string,
         public name: string,
         public sku: string,
-        public price: number
+        public price: number,
+        public imageUrl: string // Add imageUrl property
     ) {}
 }

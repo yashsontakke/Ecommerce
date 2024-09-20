@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title>
+    <link rel="stylesheet" href="/ProductDetails.css"> <!-- Link to the CSS file -->
 </head>
 <body>
+    <a href="/">Back to Home</a>
     <h1>Search Results</h1>
-    <ul>
+    <div class="product-list">
         <% if (products.length > 0) { %>
             <% products.forEach(product => { %>
-                <li>
-                    <a href="/api/products/<%= product.id %>"><%= product.name %></a> - $<%= product.price %>
-                </li>
+                <div class="product-details">
+                    <h2><%= product.name %></h2>
+                    <img src="<%= product.imageUrl %>" alt="<%= product.name %>" style="width: 300px; height: auto;">
+                    <div class="product-info">
+                        <p>SKU: <%= product.sku %></p>
+                        <p>Price: $<%= product.price %></p>
+                        <p>Description: <em><%= product.description || 'No description available.' %></em></p>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
             <% }) %>
         <% } else { %>
-            <li>No products found.</li>
+            <p>No products found.</p>
         <% } %>
-    </ul>
-    <a href="/">Back to Home</a>
+    </div>
+
 </body>
 </html>

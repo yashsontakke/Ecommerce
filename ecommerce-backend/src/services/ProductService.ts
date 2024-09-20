@@ -13,4 +13,7 @@ export class ProductService {
     public searchProductsByName(name: string): Product[] {
         return products.filter(product => product.name.toLowerCase().includes(name.toLowerCase()));
     }
+    public searchProductsBySku(sku: string): Product[] {
+        return products.filter(product => product.sku.toLowerCase().includes(sku.toLowerCase()));
+    }
 }

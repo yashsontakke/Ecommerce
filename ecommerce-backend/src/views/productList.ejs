@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to the main CSS file -->
+    <link rel="stylesheet" href="/productList.css"> <!-- Link to the product list CSS file -->
+</head>
+<body>
+    <a class="back-to-home" href="/">Back to Home</a>
+    <h1>Product List</h1>
+    <ul>
+        <% products.map(product => { %>
+            <li>
+                <img src="<%= product.imageUrl %>" alt="<%= product.name %>" style="width: 150px; height: auto;">
+                <div>
+                    <a href="/api/products/<%= product.id %>"><%= product.name %></a> - $<%= product.price %>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+
+</body>
+</html>

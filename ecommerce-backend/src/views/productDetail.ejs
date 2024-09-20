@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= product.name %> - Product Detail</title>
+    <link rel="stylesheet" href="/ProductDetails.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="product-details">
+        <h1><%= product.name %></h1>
+        <img src="<%= product.imageUrl %>" alt="<%= product.name %>" style="width: 300px; height: auto;">
+        <div class="product-info">
+            <p>SKU: <%= product.sku %></p>
+            <p>Price: $<%= product.price %></p>
+            <p>Description: <em>Product description goes here.</em></p> <!-- You can add a description field in the Product entity if needed -->
+        </div>
+        <button>Add to Cart</button>
+        <br>
+        <a href="/api/products">Back to Product List</a>
+    </div>
+</body>
+</html>

@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECommerce Platform</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to the main CSS file -->
+    <link rel="stylesheet" href="/index.css"> <!-- Link to the index CSS file -->
 </head>
 <body>
     <h1>Welcome to the ECommerce Platform</h1>
-    <h2>Available Links:</h2>
+    <!-- User Authentication Section -->
+    <div class="user-auth">
+        <% if (user) { %>
+            <p>Welcome, <%= user %>! </p>
+        <% } else { %>
+            <p><a href="/login">Login</a> </p>            
+        <% } %>
+    </div>
+
     <ul>
         <li><a href="/api/products">View All Products</a></li>
-        <li><a href="/api/products/1">View Product 1</a></li>
-        <li><a href="/api/products/2">View Product 2</a></li>
-        <!-- Add more links as needed -->
     </ul>
 
-    <h2>Search for a Product:</h2>
+    <h2>Search for a Product By Name :</h2>
     <form action="/search" method="GET">
+        <input type="text" name="name" placeholder="Enter product name" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <h2>Search for a Product By SKU :</h2>
+    <form action="/searchbysku" method="GET">
         <input type="text" name="name" placeholder="Enter product name" required>
         <button type="submit">Search</button>
     </form>

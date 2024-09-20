@@ -1,0 +1,70 @@
+/* productList.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+li {
+    background: #fff; /* White background for each product */
+    margin: 10px 0; /* Space between products */
+    padding: 15px; /* Padding inside each product */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+img {
+    border-radius: 5px; /* Rounded corners for images */
+    margin-right: 15px; /* Space between image and text */
+}
+
+div {
+    flex-grow: 1; /* Allow the div to grow and take available space */
+}
+
+a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for product name */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+a:visited {
+    color: #0056b3; /* Change color for visited links */
+}
+
+.back-to-home {
+    display: inline-block; /* Make it inline-block for better spacing */
+    margin-top: 20px; /* Space above the link */
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.back-to-home:hover {
+    text-decoration: underline; /* Underline on hover */
+}
